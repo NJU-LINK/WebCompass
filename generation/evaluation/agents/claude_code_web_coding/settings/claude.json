@@ -1,0 +1,31 @@
+{
+  "userID": "c6348e3b735f30229c6d159bc1f8dbcc3810fcfe454191cf02dc7881fe3976ab",
+  "firstStartTime": "2025-12-24T06:15:34.587Z",
+  "sonnet45MigrationComplete": true,
+  "opus45MigrationComplete": true,
+  "thinkingMigrationComplete": true,
+  "projects": {
+    "/testbed": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {
+        "chrome-devtools": {
+          "type": "stdio",
+          "command": "npx",
+          "args": [
+            "-y",
+            "chrome-devtools-mcp@0.12.1",
+            "--browser-url=http://127.0.0.1:9222"
+          ],
+          "env": {}
+        }
+      },
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false
+    }
+  }
+}

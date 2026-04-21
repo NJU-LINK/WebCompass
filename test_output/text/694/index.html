@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Interface</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode animations-on">
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="new-chat-btn" id="newChatBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    New Chat
+                </button>
+                <div class="search-container">
+                    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Search chats..." id="searchInput">
+                </div>
+            </div>
+            
+            <div class="chat-list" id="chatList">
+                <div class="chat-group">
+                    <h3 class="chat-group-title">Today</h3>
+                    <div class="chat-item active" data-id="1">
+                        <span class="chat-title">Marketing Strategy Discussion</span>
+                        <span class="chat-time">2:30 PM</span>
+                        <button class="chat-actions-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="5" r="2"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <circle cx="12" cy="19" r="2"></circle>
+                            </svg>
+                        </button>
+                        <div class="chat-actions-menu">
+                            <button class="action-item rename">Rename</button>
+                            <button class="action-item archive">Archive</button>
+                            <button class="action-item delete">Delete</button>
+                        </div>
+                    </div>
+                    <div class="chat-item" data-id="2">
+                        <span class="chat-title">Code Review Help</span>
+                        <span class="chat-time">11:45 AM</span>
+                        <button class="chat-actions-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="5" r="2"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <circle cx="12" cy="19" r="2"></circle>
+                            </svg>
+                        </button>
+                        <div class="chat-actions-menu">
+                            <button class="action-item rename">Rename</button>
+                            <button class="action-item archive">Archive</button>
+                            <button class="action-item delete">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-group">
+                    <h3 class="chat-group-title">Yesterday</h3>
+                    <div class="chat-item" data-id="3">
+                        <span class="chat-title">Product Launch Ideas</span>
+                        <span class="chat-time">Yesterday</span>
+                        <button class="chat-actions-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="5" r="2"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <circle cx="12" cy="19" r="2"></circle>
+                            </svg>
+                        </button>
+                        <div class="chat-actions-menu">
+                            <button class="action-item rename">Rename</button>
+                            <button class="action-item archive">Archive</button>
+                            <button class="action-item delete">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-group">
+                    <h3 class="chat-group-title">Previous 30 Days</h3>
+                    <div class="chat-item" data-id="4">
+                        <span class="chat-title">API Integration Guide</span>
+                        <span class="chat-time">Mar 15</span>
+                        <button class="chat-actions-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="5" r="2"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <circle cx="12" cy="19" r="2"></circle>
+                            </svg>
+                        </button>
+                        <div class="chat-actions-menu">
+                            <button class="action-item rename">Rename</button>
+                            <button class="action-item archive">Archive</button>
+                            <button class="action-item delete">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="user-avatar">JD</div>
+                    <span class="user-name">John Doe</span>
+                </div>
+                <button class="settings-btn" id="settingsBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Mobile Sidebar Overlay -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Main Chat Interface -->
+        <main class="main-chat">
+            <!-- Top Header -->
+            <header class="chat-header">
+                <button class="hamburger-btn" id="hamburgerBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                
+                <div class="model-selector" id="modelSelector">
+                    <button class="model-selector-btn">
+                        <span class="model-name">GPT-4o</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="model-dropdown">
+                        <button class="model-option active" data-model="GPT-4o">
+                            <span>GPT-4o</span>
+                            <span class="model-badge">Premium</span>
+                        </button>
+                        <button class="model-option" data-model="Claude 3.5">
+                            <span>Claude 3.5</span>
+                            <span class="model-badge">Fast</span>
+                        </button>
+                        <button class="model-option" data-model="Local LLaMA">
+                            <span>Local LLaMA</span>
+                            <span class="model-badge">Free</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="header-actions">
+                    <button class="fx-toggle" id="fxToggle" title="Toggle Animations">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </button>
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Chat Content Area -->
+            <div class="chat-content" id="chatContent">
+                <!-- Empty State -->
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-logo">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="empty-title">How can I help you today?</h2>
+                    <p class="empty-subtitle">Start a conversation or choose a prompt below</p>
+                    <div class="suggested-prompts">
+                        <button class="prompt-card" data-prompt="Help me write a professional email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>Help me write a professional email</span>
+                        </button>
+                        <button class="prompt-card" data-prompt="Explain a complex concept simply">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                            <span>Explain a complex concept simply</span>
+                        </button>
+                        <button class="prompt-card" data-prompt="Help me debug my code">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            <span>Help me debug my code</span>
+                        </button>
+                        <button class="prompt-card" data-prompt="Brainstorm creative ideas">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                            <span>Brainstorm creative ideas</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Messages Container -->
+                <div class="messages-container" id="messagesContainer"></div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-container" id="inputContainer">
+                    <button class="attachment-btn" title="Attach file">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+                        </svg>
+                    </button>
+                    <textarea 
+                        class="message-input" 
+                        id="messageInput" 
+                        placeholder="Message AI assistant..."
+                        rows="1"
+                    ></textarea>
+                    <button class="send-btn" id="sendBtn" title="Send message">
+                        <svg class="send-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                        <svg class="stop-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="6" y="6" width="12" height="12" rx="2"></rect>
+                        </svg>
+                    </button>
+                </div>
+                <p class="input-disclaimer">AI can make mistakes. Consider checking important information.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal-overlay" id="settingsModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button class="modal-close" id="modalClose">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="settings-section">
+                    <h3>Appearance</h3>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <span class="setting-label">Theme</span>
+                            <span class="setting-description">Choose your preferred color scheme</span>
+                        </div>
+                        <div class="theme-options">
+                            <button class="theme-option" data-theme="system">System</button>
+                            <button class="theme-option" data-theme="light">Light</button>
+                            <button class="theme-option active" data-theme="dark">Dark</button>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <span class="setting-label">Animation Intensity</span>
+                            <span class="setting-description">Control the glowing border and visual effects</span>
+                        </div>
+                        <div class="animation-options">
+                            <button class="animation-option" data-intensity="off">Off</button>
+                            <button class="animation-option" data-intensity="subtle">Subtle</button>
+                            <button class="animation-option active" data-intensity="high">High</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+﻿export { FigureModal } from "@/components/figures/FigureModal";

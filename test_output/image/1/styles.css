@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FFF9E6 0%, #FFF3D1 50%, #FFEFC2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Sparkles */
+.sparkles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+}
+
+.sparkle {
+    position: absolute;
+    color: #D4D0C4;
+    font-size: 12px;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+.sparkle.s1 { top: 30%; left: 20%; animation-delay: 0s; }
+.sparkle.s2 { top: 45%; left: 25%; animation-delay: 0.3s; }
+.sparkle.s3 { top: 35%; right: 20%; animation-delay: 0.6s; }
+.sparkle.s4 { top: 50%; right: 25%; animation-delay: 0.9s; }
+.sparkle.s5 { top: 60%; left: 30%; animation-delay: 1.2s; }
+.sparkle.s6 { top: 55%; right: 30%; animation-delay: 1.5s; }
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* States */
+.state {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.state.active {
+    display: flex;
+}
+
+/* Cookie State */
+.cookie-wrapper {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.cookie {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cookie:hover {
+    transform: scale(1.05);
+}
+
+.cookie:active {
+    transform: scale(0.95);
+}
+
+.cookie-body {
+    width: 120px;
+    height: 70px;
+    background: linear-gradient(145deg, #FFD966 0%, #F5C842 50%, #E8B830 100%);
+    border-radius: 50px 50px 45px 45px / 40px 40px 35px 35px;
+    position: relative;
+    box-shadow: 
+        0 8px 20px rgba(245, 166, 35, 0.3),
+        inset 0 -5px 15px rgba(200, 140, 20, 0.3),
+        inset 0 5px 15px rgba(255, 230, 150, 0.5);
+}
+
+.cookie-shine {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 60px;
+    height: 25px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, transparent 100%);
+    border-radius: 50%;
+}
+
+.cookie-crumbs {
+    position: absolute;
+    top: -8px;
+    right: -15px;
+}
+
+.crumb {
+    display: block;
+    background: #F5C842;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.crumb.c1 {
+    width: 12px;
+    height: 10px;
+    top: 0;
+    right: 0;
+}
+
+.crumb.c2 {
+    width: 8px;
+    height: 7px;
+    top: 12px;
+    right: 8px;
+}
+
+.crumb.c3 {
+    width: 6px;
+    height: 5px;
+    top: 8px;
+    right: -2px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #E8A020;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sparkle-icon {
+    color: #D4D0C4;
+    font-size: 16px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #A09080;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.magic-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    background: rgba(255, 248, 230, 0.8);
+    border: 1px solid #F5D78E;
+    border-radius: 25px;
+    color: #C4981A;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.badge-icon {
+    font-size: 14px;
+}
+
+/* Fortune State */
+.fortune-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    max-width: 400px;
+    width: 100%;
+    animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fortune-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.sparkles-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sparkles-row .sparkle {
+    position: static;
+    font-size: 14px;
+}
+
+.sparkles-row .sparkle.gold {
+    color: #F5C842;
+}
+
+.sparkles-row .sparkle.gray {
+    color: #D4D0C4;
+}
+
+.fortune-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fortune-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #E8A020;
+    margin-bottom: 24px;
+}
+
+.fortune-text {
+    font-size: 16px;
+    color: #4A4A4A;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    font-style: italic;
+}
+
+.lucky-numbers-section {
+    margin-bottom: 28px;
+}
+
+.lucky-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #E8A020;
+    margin-bottom: 16px;
+}
+
+.lucky-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.number {
+    width: 40px;
+    height: 40px;
+    background: #F5A623;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.another-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: #F5A623;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.another-btn:hover {
+    background: #E89A1C;
+    transform: scale(1.02);
+}
+
+.another-btn:active {
+    transform: scale(0.98);
+}
+
+.refresh-icon {
+    display: flex;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .title {
+        font-size: 24px;
+    }
+    
+    .fortune-card {
+        padding: 30px 24px;
+        margin: 0 16px;
+    }
+    
+    .fortune-title {
+        font-size: 20px;
+    }
+    
+    .fortune-text {
+        font-size: 14px;
+    }
+    
+    .number {
+        width: 36px;
+        height: 36px;
+        font-size: 13px;
+    }
+}
+
+/* Cookie crack animation */
+@keyframes crack {
+    0% { transform: scale(1); }
+    20% { transform: scale(1.1) rotate(-5deg); }
+    40% { transform: scale(1.15) rotate(5deg); }
+    60% { transform: scale(1.1) rotate(-3deg); }
+    80% { transform: scale(0.9); opacity: 0.8; }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+.cookie.cracking {
+    animation: crack 0.6s ease forwards;
+}

@@ -1,0 +1,89 @@
+/* CSS Reset and Base Styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color palette extracted from video frames */
+    --color-cyan-light: #5EEEFF;
+    --color-cyan: #4DE8F4;
+    --color-cyan-dark: #3DD8E8;
+    --color-blue: #6B8CFF;
+    --color-purple: #9B6BFF;
+    --color-magenta: #D64BFF;
+    --color-pink: #FF4BBA;
+    
+    /* Animation timing */
+    --wave-speed: 0.02;
+    --color-transition: 0.3s;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--color-cyan) 0%, var(--color-blue) 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+    will-change: transform;
+}
+
+/* Screen reader only content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+    outline: 3px solid var(--color-magenta);
+    outline-offset: 2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --color-cyan-light: #00FFFF;
+        --color-magenta: #FF00FF;
+    }
+}

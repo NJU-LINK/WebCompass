@@ -1,0 +1,2 @@
+{"status": "ok", "repo_path": "./test_output/video/Claude-Opus-4.5/83", "count": 2, "frames_used": 30, "id": "83", "video_path": "data/video/generation/videos/83.mp4", "timestamp": "2026-04-20T01:14:45.585448"}
+{"status": "ok", "repo_path": "./test_output/video/Claude-Opus-4.5/22", "count": 3, "frames_used": 30, "id": "22", "video_path": "data/video/generation/videos/22.mp4", "timestamp": "2026-04-20T01:17:01.534027"}

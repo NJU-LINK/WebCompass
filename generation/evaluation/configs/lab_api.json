@@ -1,0 +1,15 @@
+{
+    "tasks_file": "/path/to/tasks.jsonl",
+    "agent_dir": "/path/to/WebCompass/generation/evaluation/agents/claude_code_web_coding",
+    "output_dir": "/path/to/output",
+    "existing_site_root": "/path/to/generated_sites",
+    "start_index": 0,
+    "end_index": 100,
+    "num_tasks": -1,
+    "num_processes": 4,
+    "retry_count": 3,
+    "anthropic_base_url": "https://api.anthropic.com/v1",
+    "anthropic_auth_token": "YOUR_ANTHROPIC_API_KEY",
+    "network_mode": "bridge",
+    "model": "claude-opus-4-5-20250929"
+}

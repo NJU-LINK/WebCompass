@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Cookie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sparkles decoration -->
+        <div class="sparkles">
+            <span class="sparkle s1">✦</span>
+            <span class="sparkle s2">✧</span>
+            <span class="sparkle s3">✦</span>
+            <span class="sparkle s4">✧</span>
+            <span class="sparkle s5">✦</span>
+            <span class="sparkle s6">✧</span>
+        </div>
+
+        <!-- Cookie State -->
+        <div id="cookie-state" class="state active">
+            <div class="cookie-wrapper">
+                <div class="cookie" id="cookie">
+                    <div class="cookie-body">
+                        <div class="cookie-shine"></div>
+                    </div>
+                    <div class="cookie-crumbs">
+                        <span class="crumb c1"></span>
+                        <span class="crumb c2"></span>
+                        <span class="crumb c3"></span>
+                    </div>
+                </div>
+            </div>
+            <h1 class="title">
+                <span class="sparkle-icon">✦</span>
+                Fortune Cookie
+                <span class="sparkle-icon">✦</span>
+            </h1>
+            <p class="subtitle">Tap the cookie to crack it open!</p>
+            <div class="magic-badge">
+                <span class="badge-icon">✨</span>
+                Magic awaits inside
+                <span class="badge-icon">✨</span>
+            </div>
+        </div>
+
+        <!-- Fortune State -->
+        <div id="fortune-state" class="state">
+            <div class="fortune-card">
+                <div class="fortune-header">
+                    <div class="sparkles-row">
+                        <span class="sparkle gold">✦</span>
+                        <span class="sparkle gray">✧</span>
+                    </div>
+                    <div class="fortune-icon">
+                        <svg viewBox="0 0 64 64" width="48" height="48">
+                            <path d="M32 4l8 16 16 2-12 12 3 17-15-8-15 8 3-17L8 22l16-2z" fill="#F5A623"/>
+                            <circle cx="48" cy="16" r="6" fill="#F5A623"/>
+                            <circle cx="56" cy="24" r="4" fill="#F5A623"/>
+                        </svg>
+                    </div>
+                    <div class="sparkles-row">
+                        <span class="sparkle gold">✦</span>
+                        <span class="sparkle gray">✧</span>
+                    </div>
+                </div>
+                <h2 class="fortune-title">Your Fortune</h2>
+                <p class="fortune-text" id="fortune-text">"The future belongs to those who believe in the beauty of their dreams."</p>
+                <div class="lucky-numbers-section">
+                    <h3 class="lucky-title">Your Lucky Numbers</h3>
+                    <div class="lucky-numbers" id="lucky-numbers">
+                        <span class="number">19</span>
+                        <span class="number">38</span>
+                        <span class="number">57</span>
+                        <span class="number">4</span>
+                        <span class="number">23</span>
+                        <span class="number">68</span>
+                    </div>
+                </div>
+                <button class="another-btn" id="another-btn">
+                    <svg class="refresh-icon" viewBox="0 0 24 24" width="18" height="18">
+                        <path d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" fill="currentColor"/>
+                    </svg>
+                    Get Another Fortune
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

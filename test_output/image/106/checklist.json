@@ -1,0 +1,106 @@
+[
+  {
+    "task": "Verify page load and console errors",
+    "category": "Runnability",
+    "operation_sequence": "1. Open the homepage (index.html). 2. Open Developer Tools. 3. Check the Console tab for any errors.",
+    "expected_result": "The page loads completely. The console shows no errors (especially no 404s for images, stylesheets, or scripts).",
+    "criteria": "Pass: No errors. Fail: Any blocking error or missing resource (e.g., 404).",
+    "max_score": 10,
+    "id": 1,
+    "score": null,
+    "reason": ""
+  },
+  {
+    "task": "Verify navigation menu links on the homepage",
+    "category": "Spec Implementation",
+    "operation_sequence": "1. Locate the main navigation bar. 2. Click the 'WHO WE ARE' link. 3. Verify the URL changes to 'about.html' or the content updates accordingly.",
+    "expected_result": "Clicking 'WHO WE ARE' navigates to the About page (about.html).",
+    "criteria": "Pass: Navigation works correctly. Fail: Link is broken or does not navigate to the correct page.",
+    "max_score": 10,
+    "id": 2,
+    "score": null,
+    "reason": ""
+  },
+  {
+    "task": "Verify hover state on navigation menu items",
+    "category": "Spec Implementation",
+    "operation_sequence": "1. Hover over the 'HOME' link in the main navigation. 2. Observe any background color or text color changes. 3. Hover over 'WHO WE ARE'.",
+    "expected_result": "Based on the screenshots (home.png shows HOME with a distinct background), hovering over inactive links should likely trigger a visual change (e.g., background color change) indicating interactivity.",
+    "criteria": "Pass: Clear hover state implemented. Fail: No visual feedback on hover.",
+    "max_score": 10,
+    "id": 3,
+    "score": null,
+    "reason": ""
+  },
+  {
+    "task": "Verify active state of navigation links",
+    "category": "Spec Implementation",
+    "operation_sequence": "1. Navigate to 'index.html'. 2. Check the visual style of the 'HOME' link. 3. Navigate to 'about.html'. 4. Check the visual style of the 'WHO WE ARE' link.",
+    "expected_result": "The active page link in the navigation bar should have a distinct styling (e.g., a solid colored background) as shown in index.html.png and about.html.png.",
+    "criteria": "Pass: Active link is clearly styled differently. Fail: Active link is not styled differently.",
+    "max_score": 10,
+    "id": 4,
+    "score": null,
+    "reason": ""
+  },
+  {
+    "task": "Check layout fidelity of the header section",
+    "category": "Design Quality",
+    "reference_image_path": "index.html.png",
+    "webpage_screenshot_path": "header_screenshot.png",
+    "max_score": 10,
+    "id": 5,
+    "score": null,
+    "reason": ""
+  },
+  {
+    "task": "Check layout fidelity of the main hero section and floating text box",
+    "category": "Design Quality",
+    "reference_image_path": "index.html.png",
+    "webpage_screenshot_path": "hero_screenshot.png",
+    "max_score": 10,
+    "id": 6,
+    "score": null,
+    "reason": ""
+  },
+  {
+    "task": "Check layout fidelity of the 'Services We Provide' and grid sections",
+    "category": "Design Quality",
+    "reference_image_path": "index.html.png",
+    "webpage_screenshot_path": "services_screenshot.png",
+    "max_score": 10,
+    "id": 7,
+    "score": null,
+    "reason": ""
+  },
+  {
+    "task": "Check layout fidelity of the Reviews section",
+    "category": "Design Quality",
+    "reference_image_path": "index.html.png",
+    "webpage_screenshot_path": "reviews_screenshot.png",
+    "max_score": 10,
+    "id": 8,
+    "score": null,
+    "reason": ""
+  },
+  {
+    "task": "Check layout fidelity of the footer section",
+    "category": "Design Quality",
+    "reference_image_path": "index.html.png",
+    "webpage_screenshot_path": "footer_screenshot.png",
+    "max_score": 10,
+    "id": 9,
+    "score": null,
+    "reason": ""
+  },
+  {
+    "task": "Check layout fidelity of the About page content",
+    "category": "Design Quality",
+    "reference_image_path": "about.html.png",
+    "webpage_screenshot_path": "about_screenshot.png",
+    "max_score": 10,
+    "id": 10,
+    "score": null,
+    "reason": ""
+  }
+]

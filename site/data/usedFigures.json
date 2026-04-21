@@ -1,0 +1,107 @@
+{
+  "generatedAt": "2026-04-17T05:29:43.268Z",
+  "from": "Paper/sec/*.tex",
+  "count": 20,
+  "figures": [
+    {
+      "file": "agent_as_a_judge.pdf",
+      "path": "figures/agent_as_a_judge.pdf",
+      "referencedIn": "3_eval.tex"
+    },
+    {
+      "file": "benchmark_dim_comparison_edit.pdf",
+      "path": "figures/benchmark_dim_comparison_edit.pdf",
+      "referencedIn": "4_experiments.tex"
+    },
+    {
+      "file": "benchmark_dim_comparison_gen.pdf",
+      "path": "figures/benchmark_dim_comparison_gen.pdf",
+      "referencedIn": "4_experiments.tex"
+    },
+    {
+      "file": "benchmark_dim_comparison_repair.pdf",
+      "path": "figures/benchmark_dim_comparison_repair.pdf",
+      "referencedIn": "4_experiments.tex"
+    },
+    {
+      "file": "benchmark_task_mean_comparison.pdf",
+      "path": "figures/benchmark_task_mean_comparison.pdf",
+      "referencedIn": "4_experiments.tex"
+    },
+    {
+      "file": "combined_violin.pdf",
+      "path": "figures/combined_violin.pdf",
+      "referencedIn": "4_experiments.tex"
+    },
+    {
+      "file": "consistency_stability_linechart.pdf",
+      "path": "figures/consistency_stability_linechart.pdf",
+      "referencedIn": "4_experiments.tex"
+    },
+    {
+      "file": "data_collection_pipeline.pdf",
+      "path": "figures/data_collection_pipeline.pdf",
+      "referencedIn": "2_artifactsBench.tex"
+    },
+    {
+      "file": "edit_subtask_bars.pdf",
+      "path": "figures/edit_subtask_bars.pdf",
+      "referencedIn": "4_experiments.tex"
+    },
+    {
+      "file": "error_dist_edit.pdf",
+      "path": "figures/error_dist_edit.pdf",
+      "referencedIn": "4_experiments.tex"
+    },
+    {
+      "file": "error_dist_repair.pdf",
+      "path": "figures/error_dist_repair.pdf",
+      "referencedIn": "4_experiments.tex"
+    },
+    {
+      "file": "error_statics_gen_by_input.pdf",
+      "path": "figures/error_statics_gen_by_input.pdf",
+      "referencedIn": "4_experiments.tex"
+    },
+    {
+      "file": "error_statics_gen.pdf",
+      "path": "figures/error_statics_gen.pdf",
+      "referencedIn": "4_experiments.tex"
+    },
+    {
+      "file": "framework_bar.pdf",
+      "path": "figures/framework_bar.pdf",
+      "referencedIn": "4_experiments.tex"
+    },
+    {
+      "file": "llm_as_judge.pdf",
+      "path": "figures/llm_as_judge.pdf",
+      "referencedIn": "3_eval.tex"
+    },
+    {
+      "file": "overview.pdf",
+      "path": "figures/overview.pdf",
+      "referencedIn": "2_artifactsBench.tex"
+    },
+    {
+      "file": "rank_comparison.pdf",
+      "path": "figures/rank_comparison.pdf",
+      "referencedIn": "4_experiments.tex"
+    },
+    {
+      "file": "repair_subtask_bars.pdf",
+      "path": "figures/repair_subtask_bars.pdf",
+      "referencedIn": "4_experiments.tex"
+    },
+    {
+      "file": "task_distribution_heatmap_stacked.pdf",
+      "path": "figures/task_distribution_heatmap_stacked.pdf",
+      "referencedIn": "1_intro.tex"
+    },
+    {
+      "file": "webcompass_radial.pdf",
+      "path": "figures/webcompass_radial.pdf",
+      "referencedIn": "1_intro.tex"
+    }
+  ]
+}

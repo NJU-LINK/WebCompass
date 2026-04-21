@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxury Beauty Products - Premium skincare, makeup, and fragrances from top brands">
+    <meta name="keywords" content="luxury beauty, skincare, makeup, fragrance, Estée Lauder, Chanel, Dior, Tom Ford, La Mer">
+    <title>Luxury Beauty Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="header__logo" aria-label="Brand Logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+            </svg>
+        </div>
+        <div class="header__actions">
+            <button class="header__btn" aria-label="View options">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                    <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                    <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                    <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </button>
+            <button class="header__remix-btn" aria-label="Remix">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Remix</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar" role="complementary" aria-label="Product Filters">
+            <div class="sidebar__header">
+                <h2 class="sidebar__title">Filters</h2>
+                <button class="sidebar__reset-btn" id="resetFilters" aria-label="Reset all filters">
+                    Reset Filters
+                </button>
+            </div>
+
+            <div class="filter-section">
+                <h3 class="filter-section__title">Price Range</h3>
+                <div class="range-slider" role="group" aria-label="Price range slider">
+                    <div class="range-slider__track">
+                        <div class="range-slider__fill" id="sliderFill"></div>
+                        <input type="range" class="range-slider__input range-slider__input--min" id="minPrice" min="0" max="300" value="0" aria-label="Minimum price">
+                        <input type="range" class="range-slider__input range-slider__input--max" id="maxPrice" min="0" max="300" value="300" aria-label="Maximum price">
+                    </div>
+                    <div class="range-slider__labels">
+                        <span id="minPriceLabel">$0</span>
+                        <span id="maxPriceLabel">$300</span>
+                    </div>
+                </div>
+
+                <div class="quick-select">
+                    <span class="quick-select__label">Quick Select:</span>
+                    <div class="quick-select__buttons" role="group" aria-label="Quick price selection">
+                        <button class="quick-select__btn" data-min="0" data-max="50" aria-pressed="false">Under $50</button>
+                        <button class="quick-select__btn" data-min="50" data-max="100" aria-pressed="false">$50-$100</button>
+                        <button class="quick-select__btn" data-min="100" data-max="150" aria-pressed="false">$100-$150</button>
+                        <button class="quick-select__btn" data-min="150" data-max="300" aria-pressed="false">$150+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3 class="filter-section__title">Luxury Brands</h3>
+                <div class="brand-filters" role="group" aria-label="Brand filters">
+                    <label class="brand-filter">
+                        <input type="checkbox" class="brand-filter__input" value="Estée Lauder" aria-describedby="estee-count">
+                        <span class="brand-filter__checkbox" aria-hidden="true"></span>
+                        <span class="brand-filter__name">Estée Lauder</span>
+                        <span class="brand-filter__count" id="estee-count">4</span>
+                    </label>
+                    <label class="brand-filter">
+                        <input type="checkbox" class="brand-filter__input" value="Chanel" aria-describedby="chanel-count">
+                        <span class="brand-filter__checkbox" aria-hidden="true"></span>
+                        <span class="brand-filter__name">Chanel</span>
+                        <span class="brand-filter__count" id="chanel-count">3</span>
+                    </label>
+                    <label class="brand-filter">
+                        <input type="checkbox" class="brand-filter__input" value="Dior" aria-describedby="dior-count">
+                        <span class="brand-filter__checkbox" aria-hidden="true"></span>
+                        <span class="brand-filter__name">Dior</span>
+                        <span class="brand-filter__count" id="dior-count">2</span>
+                    </label>
+                    <label class="brand-filter">
+                        <input type="checkbox" class="brand-filter__input" value="Tom Ford" aria-describedby="tomford-count">
+                        <span class="brand-filter__checkbox" aria-hidden="true"></span>
+                        <span class="brand-filter__name">Tom Ford</span>
+                        <span class="brand-filter__count" id="tomford-count">3</span>
+                    </label>
+                    <label class="brand-filter">
+                        <input type="checkbox" class="brand-filter__input" value="La Mer" aria-describedby="lamer-count">
+                        <span class="brand-filter__checkbox" aria-hidden="true"></span>
+                        <span class="brand-filter__name">La Mer</span>
+                        <span class="brand-filter__count" id="lamer-count">3</span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content" role="main">
+            <header class="content-header">
+                <h1 class="content-header__title">Luxury Beauty Products</h1>
+                <p class="content-header__count" id="productCount" aria-live="polite">Showing 15 products</p>
+            </header>
+
+            <div class="products-grid" id="productsGrid" role="list" aria-label="Product listing">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+
+            <div class="empty-state" id="emptyState" hidden>
+                <div class="empty-state__icon" aria-hidden="true">😔</div>
+                <h2 class="empty-state__title">No items match your filters</h2>
+                <p class="empty-state__message">Try adjusting your price range or selecting different brands</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

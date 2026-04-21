@@ -1,0 +1,14 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='700' viewBox='0 0 1200 700'>
+  <defs>
+    <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0%' stop-color='#0f172a'/>
+      <stop offset='60%' stop-color='#1d4ed8'/>
+      <stop offset='100%' stop-color='#0f766e'/>
+    </linearGradient>
+  </defs>
+  <rect width='1200' height='700' fill='url(#g)'/>
+  <rect x='40' y='40' width='1120' height='620' rx='24' fill='rgba(255,255,255,0.08)' stroke='rgba(255,255,255,0.26)'/>
+  <text x='80' y='120' fill='white' font-size='36' font-family='Arial, sans-serif' font-weight='700'>WebCompass Figure Placeholder</text>
+  <text x='80' y='172' fill='rgba(255,255,255,0.85)' font-size='28' font-family='Arial, sans-serif'>repair-subtask-breakdown</text>
+  <text x='80' y='620' fill='rgba(255,255,255,0.75)' font-size='20' font-family='Arial, sans-serif'>Replace this file with the final camera-ready figure asset.</text>
+</svg>

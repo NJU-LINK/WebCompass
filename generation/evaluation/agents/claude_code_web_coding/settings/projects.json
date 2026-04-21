@@ -1,0 +1,20 @@
+{
+  "/testbed": {
+    "allowedTools": [],
+    "mcpContextUris": [],
+    "mcpServers": {
+      "chrome-devtools": {
+        "type": "stdio",
+        "command": "npx",
+        "args": [
+          "-y",
+          "chrome-devtools-mcp@0.12.1",
+          "--browser-url=http://127.0.0.1:9222"
+        ],
+        "startup_timeout_sec": 60,
+        "env": {}
+      }
+    }
+  }
+}
+

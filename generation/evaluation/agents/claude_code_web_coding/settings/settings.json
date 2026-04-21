@@ -1,0 +1,8 @@
+{
+    "env": {
+        "DISABLE_AUTOUPDATER": 1,
+        "API_TIMEOUT_MS": "3000000",
+        "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": 1
+    },
+    "alwaysThinkingEnabled": false
+}

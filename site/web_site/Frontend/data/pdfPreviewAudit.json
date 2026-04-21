@@ -1,0 +1,100 @@
+{
+  "generatedAt": "2026-04-07T15:17:33.543Z",
+  "report": [
+    {
+      "source": "agent_as_a_judge.pdf",
+      "preview": "agent_as_a_judge.png",
+      "status": "ok"
+    },
+    {
+      "source": "benchmark_dim_comparison_edit.pdf",
+      "preview": "benchmark_dim_comparison_edit.png",
+      "status": "ok"
+    },
+    {
+      "source": "benchmark_dim_comparison_gen.pdf",
+      "preview": "benchmark_dim_comparison_gen.png",
+      "status": "ok"
+    },
+    {
+      "source": "benchmark_dim_comparison_repair.pdf",
+      "preview": "benchmark_dim_comparison_repair.png",
+      "status": "ok"
+    },
+    {
+      "source": "combined_violin.pdf",
+      "preview": "combined_violin.png",
+      "status": "ok"
+    },
+    {
+      "source": "consistency_stability_linechart.pdf",
+      "preview": "consistency_stability_linechart.png",
+      "status": "ok"
+    },
+    {
+      "source": "data_collection_pipeline.pdf",
+      "preview": "data_collection_pipeline.png",
+      "status": "ok"
+    },
+    {
+      "source": "edit_subtask_bars.pdf",
+      "preview": "edit_subtask_bars.png",
+      "status": "ok"
+    },
+    {
+      "source": "error_dist_edit.pdf",
+      "preview": "error_dist_edit.png",
+      "status": "ok"
+    },
+    {
+      "source": "error_dist_repair.pdf",
+      "preview": "error_dist_repair.png",
+      "status": "ok"
+    },
+    {
+      "source": "error_statics_gen_by_input.pdf",
+      "preview": "error_statics_gen_by_input.png",
+      "status": "ok"
+    },
+    {
+      "source": "error_statics_gen.pdf",
+      "preview": "error_statics_gen.png",
+      "status": "ok"
+    },
+    {
+      "source": "framework_bar.pdf",
+      "preview": "framework_bar.png",
+      "status": "ok"
+    },
+    {
+      "source": "llm_as_judge.pdf",
+      "preview": "llm_as_judge.png",
+      "status": "ok"
+    },
+    {
+      "source": "overview.pdf",
+      "preview": "overview.png",
+      "status": "ok"
+    },
+    {
+      "source": "rank_comparison.pdf",
+      "preview": "rank_comparison.png",
+      "status": "ok"
+    },
+    {
+      "source": "repair_subtask_bars.pdf",
+      "preview": "repair_subtask_bars.png",
+      "status": "ok"
+    },
+    {
+      "source": "task_distribution_heatmap_stacked.pdf",
+      "preview": "task_distribution_heatmap_stacked.png",
+      "status": "ok"
+    },
+    {
+      "source": "webcompass_radial.pdf",
+      "preview": "webcompass_radial.png",
+      "status": "ok"
+    }
+  ]
+}

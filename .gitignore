@@ -1,0 +1,39 @@
+
+build
+data*/
+dist
+.DS_Store
+*.egg
+*.egg-info
+.eggs
+.env*
+# Environment
+# IDE
+.idea
+# Large binary files
+# Local smoke test script (may contain plaintext API creds)
+log*/
+.next
+# Node.js (site/)
+node_modules
+npm-debug.log*
+# OS
+out
+pnpm-debug.log*
+*.pyc
+__pycache__
+*.pyo
+# Python
+results*/
+smoke_test.shtest_model/
+*.swp
+*.tar.gz
+test_model/
+*.tgz
+Thumbs.db
+.venv
+venv
+.vscode
+webcompass/evaluation/agents/*/packages/opencode*
+yarn-debug.log*
+yarn-error.log*
