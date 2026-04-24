@@ -15,11 +15,11 @@ export const siteConfig = {
   contacts: "liujiaheng@nju.edu.cn; l1874493887@gmail.com",
   builtWith: "Next.js, Tailwind CSS, Framer Motion, shadcn/ui",
   links: {
-    paper: "https://arxiv.org/abs/TODO",
+    paper: "https://arxiv.org/abs/2604.18224",
     github: "https://github.com/NJU-LINK/WebCompass",
-    huggingface: "https://huggingface.co/datasets/NJU-LINK/WebCompass",
+    huggingface: "https://huggingface.co/papers/2604.18224",
     dataset: "https://huggingface.co/datasets/NJU-LINK/WebCompass",
-    arxivBadge: "https://arxiv.org/abs/TODO"
+    arxivBadge: "https://arxiv.org/abs/2604.18224"
   }
 };
 
