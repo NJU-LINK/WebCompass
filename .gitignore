@@ -25,7 +25,8 @@ __pycache__
 *.pyo
 # Python
 results*/
-smoke_test.shtest_model/
+smoke_test.sh
+test_model/
 *.swp
 *.tar.gz
 test_model/
