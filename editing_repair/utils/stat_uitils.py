@@ -65,6 +65,7 @@ def load_judge_results(
                     "folder_name": folder.name,
                     "judge_result": judge_data["judge_result"],
                     "task_type": info_data["task_type"],
+                    "difficulty": info_data.get("difficulty", "unknown"),
                 })
         except Exception as e:
             print(f"Error loading {judge_file} or {info_file}: {e}")
@@ -91,15 +92,15 @@ def calculate_statistics(
         d: defaultdict(list) for d in dims
     }
 
-    difficulty_overall: Dict[int, List[float]] = defaultdict(list)
-    difficulty_per_dim: Dict[str, Dict[int, List[float]]] = {
+    difficulty_overall: Dict[str, List[float]] = defaultdict(list)
+    difficulty_per_dim: Dict[str, Dict[str, List[float]]] = {
         d: defaultdict(list) for d in dims
     }
 
     for result in results:
         folder_name = result["folder_name"]
         task_scores = result["judge_result"].get("task_scores", [])
-        difficulty = len(result["task_type"])
+        difficulty = result["difficulty"]
 
         if not task_scores:
             print(f"Warning: No task scores found for folder {folder_name}")
@@ -163,7 +164,7 @@ def calculate_statistics(
             entry[f"avg_{d}"] = sum(vals) / len(vals) if vals else 0
         task_type_avg[tt] = entry
 
-    difficulty_avg: Dict[int, Any] = {}
+    difficulty_avg: Dict[str, Any] = {}
     for diff, scores in difficulty_overall.items():
         entry = {
             "harmonic_mean": sum(scores) / len(scores) if scores else 0,

@@ -558,6 +558,7 @@ class MLLMChat:
 
         llm_log = {
             "task_type": info["task_type"],
+            "difficulty": info.get("difficulty"),
             "description": description,
             "ans_screenshot": screenshot_files,
             "workspace_path": str(workspace_path),
@@ -742,6 +743,7 @@ class MLLMChat:
 
         llm_log = {
             "task_type": info["task_type"],
+            "difficulty": info.get("difficulty"),
             "description": description,
             "ans_screenshot": screenshot_files,
             "workspace_path": str(workspace_path),
